@@ -3,10 +3,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, FileDown, ShieldCheck, Clipboard, MessageSquare, Mail, Phone, Clock, HardHat } from "lucide-react";
+import { ArrowLeft, FileDown, ShieldCheck, Clipboard, MessageSquare, Mail, Phone, Clock, HardHat, ChevronRight } from "lucide-react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import FloatingWhatsApp from "./FloatingWhatsApp";
+import FAQAccordion from "./FAQAccordion";
+import productData from "@/data.json";
 
 interface ProductDetailClientProps {
   product: {
@@ -28,6 +30,37 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
     phone: "",
     message: `Hello, I'm interested in the ${product.name} (Model: ${product.models[0]}). Please send pricing and availability.`,
   });
+
+  const relatedProducts = React.useMemo(() => {
+    return productData.products
+      .filter((p) => p.category === product.category && p.slug !== product.slug)
+      .slice(0, 3);
+  }, [product.category, product.slug]);
+
+  const productFaqs = React.useMemo(() => {
+    return [
+      {
+        question: `What is the warranty coverage for the ${product.name}?`,
+        answer: `The ${product.name} is backed by Radhe Enterprise's comprehensive manufacturer warranty, which covers the structural steel chassis, hydraulic cylinder welds, and sealing kits. Contact our Morbi office for details.`
+      },
+      {
+        question: `How can I request a customized quote for the ${product.name}?`,
+        answer: `You can submit the inquiry form directly on this page, or click the WhatsApp Support link to connect with our logistics team in Gujarat. We provide custom quotations with shipping rates within 2 hours.`
+      },
+      {
+        question: `Does Radhe Enterprise manufacture custom heights or widths for the ${product.name}?`,
+        answer: `Yes. As a leading material handling equipment manufacturer in Gujarat, India, we offer tailored chassis extensions, customized fork lengths, adjustable fork spreads, and specialty wheel options.`
+      },
+      {
+        question: `What safety mechanisms are built into the ${product.name}?`,
+        answer: `Depending on the model specifications, the ${product.name} integrates high-pressure safety bypass valves, dead-man control brakes, overhead operator cages, hydraulic speed governors, and chain-slack sensors.`
+      },
+      {
+        question: `Are replacement parts for the ${product.name} readily available?`,
+        answer: `Yes, we maintain a fully stocked inventory of spare parts (such as polyurethane rollers, hydraulic seal kits, lift chains, and control boards) at our Morbi factory to ensure minimum downtime for our customers.`
+      }
+    ];
+  }, [product.name]);
 
   const activeSpecs = product.specifications[activeModel] || {};
 
@@ -269,6 +302,73 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
 
           </div>
         </div>
+
+        {/* Dynamic FAQ Section */}
+        <section className="border-t border-gray-800/80 pt-16 space-y-8">
+          <div className="text-center sm:text-left space-y-2">
+            <h2 className="text-xs uppercase font-mono tracking-widest text-primary-yellow font-bold">
+              SPECIFICATION FAQ
+            </h2>
+            <h3 className="text-2xl sm:text-3xl font-black text-text-white uppercase tracking-tight">
+              Frequently Asked Questions
+            </h3>
+            <div className="h-1 w-20 bg-gradient-to-r from-primary-yellow to-orange-accent sm:mx-0 mx-auto rounded" />
+          </div>
+          <div className="max-w-4xl">
+            <FAQAccordion faqs={productFaqs} />
+          </div>
+        </section>
+
+        {/* Related Products Section */}
+        {relatedProducts.length > 0 && (
+          <section className="border-t border-gray-800/80 pt-16 space-y-8">
+            <div className="text-center sm:text-left space-y-2">
+              <h2 className="text-xs uppercase font-mono tracking-widest text-primary-yellow font-bold">
+                RECOMMENDED MACHINERY
+              </h2>
+              <h3 className="text-2xl sm:text-3xl font-black text-text-white uppercase tracking-tight">
+                Related Equipment
+              </h3>
+              <div className="h-1 w-20 bg-gradient-to-r from-primary-yellow to-orange-accent sm:mx-0 mx-auto rounded" />
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relatedProducts.map((rp) => (
+                <div
+                  key={rp.slug}
+                  className="bg-[#161B22] border border-gray-800 rounded-xl overflow-hidden hover:border-primary-yellow/40 transition-all duration-300 flex flex-col justify-between group glow-yellow-hover"
+                >
+                  <div className="bg-[#0B0E14] aspect-square flex items-center justify-center p-6 relative overflow-hidden border-b border-gray-800">
+                    <Image
+                      src={`/images/products/${rp.slug}.png`}
+                      alt={`${rp.name} - Radhe Enterprise`}
+                      width={160}
+                      height={160}
+                      className="object-contain max-h-[130px] drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-4 flex-1 flex flex-col justify-between space-y-4">
+                    <div>
+                      <span className="text-[10px] font-mono text-muted-gray uppercase block mb-1">
+                        {rp.category}
+                      </span>
+                      <h4 className="text-text-white font-extrabold text-sm uppercase group-hover:text-primary-yellow transition-colors leading-tight line-clamp-1">
+                        {rp.name}
+                      </h4>
+                    </div>
+                    <Link
+                      href={`/products/${rp.slug}`}
+                      className="w-full bg-[#0B0E14] border border-gray-800 group-hover:border-primary-yellow text-muted-gray group-hover:text-dark-bg group-hover:bg-primary-yellow py-2 rounded text-[10px] font-mono font-bold uppercase transition-all flex items-center justify-center gap-1"
+                    >
+                      View Specs
+                      <ChevronRight className="w-3 h-3 text-primary-yellow group-hover:text-dark-bg" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
       </main>
 
       <Footer />

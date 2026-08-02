@@ -34,28 +34,48 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-xs">
               <li>
-                <Link href="#products" className="hover:text-primary-yellow transition-colors">
-                  Manual & Electric Stackers
+                <Link href="/manual-stacker" className="hover:text-primary-yellow transition-colors">
+                  Manual Stackers
                 </Link>
               </li>
               <li>
-                <Link href="#products" className="hover:text-primary-yellow transition-colors">
+                <Link href="/electric-stacker" className="hover:text-primary-yellow transition-colors">
+                  Electric & Semi-Electric Stackers
+                </Link>
+              </li>
+              <li>
+                <Link href="/pallet-truck" className="hover:text-primary-yellow transition-colors">
                   Manual & Electric Pallet Trucks
                 </Link>
               </li>
               <li>
-                <Link href="#products" className="hover:text-primary-yellow transition-colors">
-                  Drum Handling Equipment
+                <Link href="/forklift" className="hover:text-primary-yellow transition-colors">
+                  Diesel & Electric Forklifts
                 </Link>
               </li>
               <li>
-                <Link href="#products" className="hover:text-primary-yellow transition-colors">
-                  Forklifts & Lift Tables
+                <Link href="/drum-handler" className="hover:text-primary-yellow transition-colors">
+                  Drum Handlers
                 </Link>
               </li>
               <li>
-                <Link href="#products" className="hover:text-primary-yellow transition-colors">
-                  Aerial Work Platforms & Tail Lifts
+                <Link href="/lift-table" className="hover:text-primary-yellow transition-colors">
+                  Hydraulic Lift Tables
+                </Link>
+              </li>
+              <li>
+                <Link href="/tail-lift" className="hover:text-primary-yellow transition-colors">
+                  Hydraulic Tail Lifts
+                </Link>
+              </li>
+              <li>
+                <Link href="/aerial-work-platform" className="hover:text-primary-yellow transition-colors">
+                  Aerial Work Platforms
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-primary-yellow transition-colors font-bold text-primary-yellow/90">
+                  Logistics Blog
                 </Link>
               </li>
             </ul>

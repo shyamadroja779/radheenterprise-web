@@ -290,7 +290,7 @@ export default function ProductCatalog() {
                     
                     <Image
                       src={`/images/products/${p.slug}.png`}
-                      alt={p.name}
+                      alt={`${p.name} - Material Handling Equipment Manufacturer in Gujarat | Radhe Enterprise`}
                       width={240}
                       height={240}
                       className="object-contain max-h-[190px] drop-shadow-[0_4px_12px_rgba(0,0,0,0.55)] group-hover:scale-105 transition-transform duration-500"

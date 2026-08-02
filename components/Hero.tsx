@@ -41,9 +41,9 @@ export default function Hero() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="font-sans font-black text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight text-text-white uppercase"
               >
-                Industrial Material <br />
+                Material Handling Equipment <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-yellow to-orange-accent">
-                  Handling Redefined
+                  Manufacturer in Gujarat
                 </span>
               </motion.h1>
 
@@ -54,6 +54,15 @@ export default function Hero() {
                 className="text-base sm:text-lg text-muted-gray leading-relaxed max-w-xl"
               >
                 Premium stackers, forklifts, pallet trucks, and lifting solutions engineered for extreme stability. Built to sustain loading requirements from 100kg to 5000kg.
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.25 }}
+                className="text-xs sm:text-sm text-muted-gray/80 leading-relaxed max-w-xl font-mono border-l-2 border-primary-yellow/30 pl-3 pt-1"
+              >
+                As a leading <strong>material handling equipment manufacturer in Gujarat</strong> and a dedicated <strong>manual stacker manufacturer in Morbi</strong>, Radhe Enterprise provides heavy-duty warehouse machinery across India. Our catalog features high-performance <strong>Manual Stackers</strong>, battery-powered <strong>Electric Stackers</strong>, reliable diesel and electric <strong>Forklifts</strong>, hydraulic <strong>Drum Handlers</strong>, manual and electric <strong>Pallet Trucks</strong>, and custom <strong>Lift Tables</strong>. We are a trusted <strong>forklift supplier in Gujarat</strong>, a premium <strong>drum handler manufacturer in India</strong>, and a certified <strong>electric pallet truck supplier</strong>.
               </motion.p>
             </div>
 

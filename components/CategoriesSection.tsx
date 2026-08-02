@@ -2,6 +2,7 @@
 
 import React, { useMemo } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, HardHat, Compass } from "lucide-react";
 import productData from "@/data.json";
@@ -79,7 +80,7 @@ export default function CategoriesSection() {
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(245,166,35,0.01),transparent_70%)] pointer-events-none" />
                 <Image
                   src={`/images/products/${cat.slug}.png`}
-                  alt={cat.name}
+                  alt={`${cat.name} - Material Handling Equipment | Radhe Enterprise`}
                   width={150}
                   height={150}
                   className="object-contain max-h-[120px] drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] group-hover:scale-105 transition-transform duration-500"
@@ -97,13 +98,31 @@ export default function CategoriesSection() {
                   </span>
                 </div>
 
-                <a
-                  href={`#products-${encodeURIComponent(cat.name)}`}
+                <Link
+                  href={
+                    cat.name === "Manual Stackers"
+                      ? "/manual-stacker"
+                      : cat.name === "Semi Electric Stackers" || cat.name === "Electric Stackers"
+                      ? "/electric-stacker"
+                      : cat.name === "Forklifts"
+                      ? "/forklift"
+                      : cat.name === "Drum Handling Equipment"
+                      ? "/drum-handler"
+                      : cat.name === "Manual Pallet Trucks" || cat.name === "Electric Pallet Trucks"
+                      ? "/pallet-truck"
+                      : cat.name === "Lift Tables"
+                      ? "/lift-table"
+                      : cat.name === "Tail Lifts"
+                      ? "/tail-lift"
+                      : cat.name === "Aerial Work Platforms"
+                      ? "/aerial-work-platform"
+                      : `/#products-${encodeURIComponent(cat.name)}`
+                  }
                   className="w-full bg-[#0B0E14] border border-gray-800 group-hover:border-primary-yellow text-muted-gray group-hover:text-dark-bg group-hover:bg-primary-yellow py-2 rounded text-[10px] font-mono font-bold uppercase transition-all flex items-center justify-center gap-1"
                 >
                   Explore Class
                   <ArrowRight className="w-3 h-3 text-primary-yellow group-hover:text-dark-bg" />
-                </a>
+                </Link>
               </div>
             </motion.div>
           ))}

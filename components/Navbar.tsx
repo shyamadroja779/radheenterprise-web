@@ -2,11 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Hammer, Menu, X, PhoneCall, ArrowUpRight } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isBlogActive = pathname ? pathname.startsWith("/blog") : false;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,25 +47,35 @@ export default function Navbar() {
           {/* Desktop Nav Links */}
           <div className="hidden md:flex items-center gap-8">
             <Link
-              href="#products"
+              href="/#products"
               className="text-muted-gray hover:text-primary-yellow text-sm font-medium tracking-wide transition-colors"
             >
               Products
             </Link>
             <Link
-              href="#about"
+              href="/blog"
+              className={`text-sm font-medium tracking-wide transition-colors ${
+                isBlogActive
+                  ? "text-primary-yellow font-extrabold"
+                  : "text-muted-gray hover:text-primary-yellow"
+              }`}
+            >
+              Blog
+            </Link>
+            <Link
+              href="/#about"
               className="text-muted-gray hover:text-primary-yellow text-sm font-medium tracking-wide transition-colors"
             >
               About Us
             </Link>
             <Link
-              href="#why-choose-us"
+              href="/#why-choose-us"
               className="text-muted-gray hover:text-primary-yellow text-sm font-medium tracking-wide transition-colors"
             >
               Why Choose Us
             </Link>
             <Link
-              href="#contact"
+              href="/#contact"
               className="text-muted-gray hover:text-primary-yellow text-sm font-medium tracking-wide transition-colors"
             >
               Contact
@@ -106,28 +119,39 @@ export default function Navbar() {
         <div className="md:hidden bg-[#0C1017] border-b border-gray-800 animate-in fade-in slide-in-from-top-4 duration-200">
           <div className="px-4 pt-2 pb-6 space-y-3 shadow-lg">
             <Link
-              href="#products"
+              href="/#products"
               onClick={() => setIsOpen(false)}
               className="block px-3 py-2.5 rounded-lg text-base font-medium text-muted-gray hover:text-primary-yellow hover:bg-[#161B22]"
             >
               Products
             </Link>
             <Link
-              href="#about"
+              href="/blog"
+              onClick={() => setIsOpen(false)}
+              className={`block px-3 py-2.5 rounded-lg text-base font-medium transition-colors ${
+                isBlogActive
+                  ? "text-primary-yellow font-bold bg-[#161B22]"
+                  : "text-muted-gray hover:text-primary-yellow hover:bg-[#161B22]"
+              }`}
+            >
+              Blog Catalog
+            </Link>
+            <Link
+              href="/#about"
               onClick={() => setIsOpen(false)}
               className="block px-3 py-2.5 rounded-lg text-base font-medium text-muted-gray hover:text-primary-yellow hover:bg-[#161B22]"
             >
               About Us
             </Link>
             <Link
-              href="#why-choose-us"
+              href="/#why-choose-us"
               onClick={() => setIsOpen(false)}
               className="block px-3 py-2.5 rounded-lg text-base font-medium text-muted-gray hover:text-primary-yellow hover:bg-[#161B22]"
             >
               Why Choose Us
             </Link>
             <Link
-              href="#contact"
+              href="/#contact"
               onClick={() => setIsOpen(false)}
               className="block px-3 py-2.5 rounded-lg text-base font-medium text-muted-gray hover:text-primary-yellow hover:bg-[#161B22]"
             >
@@ -144,7 +168,7 @@ export default function Navbar() {
                 <ArrowUpRight className="w-4 h-4" />
               </a>
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setIsOpen(false)}
                 className="flex items-center justify-center gap-2 bg-primary-yellow text-dark-bg px-4 py-3 rounded-lg text-base font-bold"
               >
