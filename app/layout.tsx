@@ -92,10 +92,10 @@ export default function RootLayout({
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Ground Floor, Sr No 02 P1/P1 or 02 P2/P2, Plot No 1, Shyam Complex Shop No 8, Uchi Mandal",
+      "streetAddress": "Near CNG Petrol Pump, Opposite Shiv Hotel, Uchi Mandal",
       "addressLocality": "Morbi",
       "addressRegion": "Gujarat",
-      "postalCode": "363641",
+      "postalCode": "363642",
       "addressCountry": "IN"
     },
     "description": "Radhe Enterprise is a leading material handling equipment manufacturer in Gujarat, India, specializing in manual stackers, electric stackers, forklifts, pallet trucks, and drum handlers.",

@@ -98,7 +98,7 @@ export default function ContactSection() {
                 <div className="space-y-1">
                   <h4 className="text-xs font-mono uppercase tracking-wider text-muted-gray">Corporate Address</h4>
                   <p className="text-xs sm:text-sm text-text-white leading-relaxed font-medium">
-                    Ground Floor, Sr No 02 P1/P1 or 02 P2/P2, Plot No 1, Shyam Complex Shop No 8, Uchi Mandal, Morbi, Gujarat, India.
+                    Near CNG Petrol Pump, Opposite Shiv Hotel, Uchi Mandal, Morbi - 363642, Gujarat, India.
                   </p>
                 </div>
               </div>

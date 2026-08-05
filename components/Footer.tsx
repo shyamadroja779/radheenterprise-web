@@ -74,7 +74,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-primary-yellow transition-colors font-bold text-primary-yellow/90">
+                <Link href="/blog" className="hover:text-primary-yellow transition-colors">
                   Logistics Blog
                 </Link>
               </li>
@@ -90,7 +90,7 @@ export default function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-primary-yellow shrink-0 mt-0.5" />
                 <span>
-                  Ground Floor, Sr No 02 P1/P1 or 02 P2/P2, Plot No 1, Shyam Complex Shop No 8, Uchi Mandal, Morbi, Gujarat, India.
+                  Near CNG Petrol Pump, Opposite Shiv Hotel, Uchi Mandal, Morbi - 363642, Gujarat, India.
                 </span>
               </li>
               <li className="flex items-center gap-2">
