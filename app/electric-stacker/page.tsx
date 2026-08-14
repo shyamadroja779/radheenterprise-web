@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Electric & Semi-Electric Stacker Manufacturer | Radhe Enterprise",
     description: "Discover our high-efficiency semi-electric and full-electric stackers. Lift capacities up to 2000kg, lift heights up to 5500mm. Quality warehousing solutions.",
-    url: "https://radheenterprise.co.in/electric-stacker",
+    url: "https://www.radheenterprise.co.in/electric-stacker",
     type: "website",
   },
 };

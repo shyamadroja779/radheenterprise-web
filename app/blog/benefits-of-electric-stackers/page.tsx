@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "5 Benefits of Electric Stackers in Warehouses | Radhe Enterprise",
     description: "Learn how electric stackers improve efficiency, safety, and operational costs. Switch from manual to electric today.",
-    url: "https://radheenterprise.co.in/blog/benefits-of-electric-stackers",
+    url: "https://www.radheenterprise.co.in/blog/benefits-of-electric-stackers",
     type: "article",
   },
 };

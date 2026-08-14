@@ -24,7 +24,7 @@ export default function BlogPost({
   contentHtml,
   slug,
 }: BlogPostProps) {
-  const baseUrl = "https://radheenterprise.co.in";
+  const baseUrl = "https://www.radheenterprise.co.in";
   
   const articleSchema = {
     "@context": "https://schema.org",
@@ -35,17 +35,42 @@ export default function BlogPost({
     "author": {
       "@type": "Organization",
       "name": "Radhe Enterprise",
-      "url": "https://radheenterprise.co.in"
+      "url": "https://www.radheenterprise.co.in"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Radhe Enterprise",
-      "logo": "https://radheenterprise.co.in/favicon.ico"
+      "logo": "https://www.radheenterprise.co.in/favicon.ico"
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `${baseUrl}/blog/${slug}`
     }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.radheenterprise.co.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.radheenterprise.co.in/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": title,
+        "item": `${baseUrl}/blog/${slug}`
+      }
+    ]
   };
 
   return (
@@ -55,6 +80,10 @@ export default function BlogPost({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-24">

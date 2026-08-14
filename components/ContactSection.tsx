@@ -97,9 +97,14 @@ export default function ContactSection() {
                 </div>
                 <div className="space-y-1">
                   <h4 className="text-xs font-mono uppercase tracking-wider text-muted-gray">Corporate Address</h4>
-                  <p className="text-xs sm:text-sm text-text-white leading-relaxed font-medium">
+                  <a
+                    href="https://www.google.com/maps/place/RADHE+ENTERPRISE+MORBI/@22.8601386,70.9543395,18z/data=!4m6!3m5!1s0x39598f73ea06dfc1:0xe61481f337601735!8m2!3d22.8601386!4d70.9543395!16s%2Fg%2F11ytvmwbyt?hl=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs sm:text-sm text-text-white hover:text-primary-yellow transition-colors leading-relaxed font-medium block"
+                  >
                     Near CNG Petrol Pump, Opposite Shiv Hotel, Uchi Mandal, Morbi - 363642, Gujarat, India.
-                  </p>
+                  </a>
                 </div>
               </div>
 
@@ -178,7 +183,7 @@ export default function ContactSection() {
             <div className="bg-[#161B22] border border-gray-800 rounded-xl overflow-hidden shadow-lg h-[240px] relative">
               <iframe
                 title="RADHE ENTERPRISE Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.3315664188544!2d70.925439!3d22.920436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8488e05cb6b%3A0xe54fb7a21415dfb8!2sUchi%20Mandal%2C%20Morbi%2C%20Gujarat%20363641%2C%20India!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.0754800366633!2d70.9521508!3d22.8601386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39598f73ea06dfc1%3A0xe61481f337601735!2sRADHE%20ENTERPRISE%20MORBI!5e0!3m2!1sen!2sin!4v1723654435000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

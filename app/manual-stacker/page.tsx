@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Manual Stacker Manufacturer in Gujarat | Radhe Enterprise",
     description: "Premium manual hydraulic stackers built with high-tensile C-section steel. Rated load capacity from 1000kg to 3000kg. Shipping across India.",
-    url: "https://radheenterprise.co.in/manual-stacker",
+    url: "https://www.radheenterprise.co.in/manual-stacker",
     type: "website",
   },
 };
@@ -24,31 +24,58 @@ export default function ManualStackerPage() {
   const seoHeading = "Leading Manual Stacker Manufacturer in Gujarat & India";
   
   const seoContentHtml = `
+    <h2>What is a Manual Stacker and How Does It Work?</h2>
     <p>
-      In modern warehousing and logistics operations, efficiency, safety, and durability are the cornerstones of success. As a premier <strong>material handling equipment manufacturer</strong> based in Morbi, Radhe Enterprise has established itself as the leading <strong>manual stacker manufacturer in Gujarat</strong>. We design and fabricate high-quality hand-operated hydraulic lifting machinery that caters specifically to industrial plants, ceramic warehouses, paper mills, and manufacturing factories across Rajkot, Ahmedabad, Morbi, and the rest of India.
+      A manual stacker is a hand-operated hydraulic lifting device designed to lift, move, and stack pallets in industrial environments. Unlike motorized forklifts, a manual stacker relies on human power for movement and lifting. The operator pulls or pushes the stacker horizontally using heavy-duty handles. To lift a load, the operator pumps a hydraulic foot pedal or hand lever. This pumping action pushes hydraulic fluid into a high-pressure cylinder, which extends the piston and pulls high-strength lifting chains to raise the fork carriage. To lower the forks, the operator engages a release valve (like a hand trigger or foot pressure relief valve) that slowly returns the hydraulic fluid to its reservoir, ensuring a controlled, smooth descent.
+    </p>
+
+    <h2>Manual Stacker Applications in Warehouses and Factories</h2>
+    <p>
+      Manual hydraulic stackers are highly versatile tools widely utilized in shipping docks, manufacturing plants, stockrooms, and warehouses. They are ideal for loading and unloading utility trucks, staging materials for production lines, and organizing pallet racks. Because they are compact, manual stackers excel in narrow-aisle environments where standard forklifts cannot navigate. In regions like Morbi, Gujarat, they are frequently used in ceramic warehouses and packaging units to handle pallets of tiles and raw materials safely.
     </p>
     
-    <h3>Why Choose Our Manual Hydraulic Stackers?</h3>
+    <h2>Our Range of Manual Stacker Capacities and Lifting Heights</h2>
     <p>
-      Our CTY manual stackers are engineered utilizing heavy-duty C-section steel masts, which offer unmatched rigidity and resist bending under maximum load capacities. Available in models ranging from 1000kg (1 Ton) to 3000kg (3 Tons) rated load capacity, and lift heights from 1600mm to 3500mm, these machines provide a versatile, electricity-free alternative to heavy forklifts. As a trusted <strong>pallet truck supplier</strong> and lifting specialist, we guarantee that each stacker is equipped with high-pressure, leak-proof hydraulic cylinders. These systems can be operated via both hand levers and foot pedals, minimizing user fatigue and accelerating pallet storage times.
+      At Radhe Enterprise, we manufacture manual stackers in multiple configurations to suit different load demands. Our product range includes:
+      <ul>
+        <li><strong>COT-QB Manual Platform Stacker:</strong> A light-duty platform stacker with a 400kg capacity, offering lift heights of 850mm, 1100mm, or 1300mm. It features a chrome-plated seamless steel pipe mast and a removable platform.</li>
+        <li><strong>CTY-D Manual Stacker:</strong> A robust general-purpose stacker available in capacities of 500kg (CTY-D05), 1000kg (CTY-D10), 2000kg (CTY-D20), and 3000kg (CTY-D30). It features lift heights from 1100mm up to 3500mm, utilizing nylon wheels and a hand/foot lifting pump.</li>
+        <li><strong>CTY-E Manual Stacker:</strong> An export-standard manual lifter with capacities ranging from 1000kg (CTY-E10) to 3000kg (CTY-E30). Standard models support lift heights of 1600mm, 2000mm, 2500mm, 3000mm, and 3500mm.</li>
+        <li><strong>CTY-A Channel Steel Manual Stacker:</strong> An economical model with 1000kg or 2000kg capacity and a standard 1600mm lifting height, featuring a channel steel or I-beam mast.</li>
+      </ul>
     </p>
 
-    <h3>Key Engineering and Technical Advantages</h3>
-    <ul>
-      <li><strong>Robust C-Mast Structure:</strong> Crafted from premium hot-rolled carbon steel, ensuring structural integrity under high load stresses.</li>
-      <li><strong>Advanced Hydraulic Security:</strong> An integrated oil cylinder limit valve acts as a physical height lock, avoiding over-extension without the need for manual limit screws.</li>
-      <li><strong>Optimized Mobility:</strong> Fitted with durable polyurethane (PU) steering wheels and tandem fork rollers, allowing smooth, silent maneuverability over concrete warehouse floors while preventing floor scratching.</li>
-      <li><strong>Industrial Safety Design:</strong> Outfitted with mechanical wheel brakes and protective wire mesh guards to shield operators from moving chains or lifting carriages.</li>
-    </ul>
-
-    <h3>Serving Gujarat's Industrial Hubs and Beyond</h3>
+    <h2>Key Technical Specifications and Engineering Advantages</h2>
     <p>
-      Morbi is renowned as India's ceramic capital, which demands robust equipment to transport raw clay, tiles, and heavy equipment parts. By acting as a specialized <strong>manual stacker manufacturer in Gujarat</strong>, we have optimized our supply chains to deliver rugged manual lifters directly to industrial estates in Rajkot, Surat, Vadodara, and Ahmedabad. Our quick-dispatch network also ensures that operations across India have seamless access to parts, maintenance guides, and customization options (such as adjustable fork widths ranging from 330mm to 680mm and extendable straddle legs for closed-bottom pallets).
+      Our manual stackers are designed with durable materials and smart features to ensure long service life and high safety. The CTY-E models are built with a high-quality C-section steel mast that resists bending under load. They use a smart oil cylinder limit valve, which automatically controls the maximum lift height to prevent over-extension without requiring extra limit screws. The forks on the CTY-E series are adjustable from 330mm to 680mm to accommodate different pallet widths, and the standard fork length is 1150mm. The wheels are made of durable polyurethane (PU), which rolls smoothly and silently on concrete warehouse floors.
     </p>
 
-    <h3>Operational Maintenance and Lifespan</h3>
+    <h2>How to Choose the Right Manual Stacker for Your Pallets</h2>
     <p>
-      Unlike complex electronic vehicles, manual hydraulic stackers have very low maintenance requirements. Checking the hydraulic oil levels, lubricating the lifting chain, and inspecting wheel wear are the only standard procedures needed to ensure a decade of hassle-free operation. If your operations require horizontal transport over longer distances alongside lifting, our team can pair your stacker order with high-end hand pallet jacks as we are a premier <strong>pallet truck supplier</strong>, creating a unified material handling package.
+      When selecting a manual stacker, it is crucial to consider the type of pallets you use:
+      <ul>
+        <li><strong>Standard Manual Stackers (Fixed Legs):</strong> These models have support legs positioned directly beneath the forks. They are designed exclusively for open-bottom pallets (where there are no bottom boards).</li>
+        <li><strong>CTY Stretchable Leg Manual Stacker:</strong> If your facility uses double-faced or closed-bottom pallets, a standard stacker will run over the bottom boards and cannot lift them. For these applications, we manufacture the CTY Stretchable Leg Manual Stacker (models CTY-C1T-II and CTY-C2T-II). This model features adjustable straddle legs that can slide outward from 1000mm to 1500mm, wrapping around the outside of the pallet. This design allows you to lift a wider variety of pallet configurations safely.</li>
+      </ul>
+    </p>
+
+    <h2>Safety and Maintenance Guidelines</h2>
+    <p>
+      Operator safety is critical. Our manual stackers include built-in safety features, such as mechanical wheel brakes to secure the vehicle while loading, and protective wire mesh guards to shield the operator from moving chains. Because these lifters do not have complex electrical systems, maintenance is simple and inexpensive. Regular upkeep involves checking the hydraulic oil level, lubricating the dual lifting chains, and inspecting the wheels for wear or flat spots.
+    </p>
+
+    <h2>Comparing Options: Manual Stacker vs. Forklift vs. Electric Stacker</h2>
+    <p>
+      Choosing the right equipment depends on your daily operational volume and layout:
+      <ul>
+        <li><strong>Manual Stacker vs. Forklift:</strong> Industrial forklifts are motorized, carry much heavier loads (exceeding 3000kg), and are designed for rapid long-distance travel. However, forklifts require wide aisles (over 3 meters) and have high maintenance costs. Manual stackers are compact, require turning space under 1600mm, have zero fuel costs, and do not require specialized operator licenses.</li>
+        <li><strong>Manual Stacker vs. Electric Stacker:</strong> Electric and semi-electric stackers (such as our CTD and HES series) use battery-powered lift motors to raise forks quickly, which helps reduce operator fatigue during high-volume operations. While electric models boost speed, manual stackers remain the most economical and maintenance-free choice for facilities with low-to-medium lifting cycles.</li>
+      </ul>
+    </p>
+
+    <h2>Serving Industrial Hubs in Gujarat and Across India</h2>
+    <p>
+      As a leading manual stacker manufacturer in Gujarat, Radhe Enterprise supports manufacturing units and ceramic factories in Morbi, Rajkot, Surat, and Ahmedabad. Our manufacturing facility in Morbi specializes in building reliable material handling equipment designed to withstand dust-heavy factory settings. We ship our manual stackers, pallet jacks, and tail lifts directly to customers across India, ensuring prompt delivery and excellent support.
     </p>
   `;
 

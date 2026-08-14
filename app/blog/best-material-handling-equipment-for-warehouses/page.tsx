@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Best Material Handling Equipment for Warehouses | Radhe Enterprise",
     description: "Upgrade your warehouse operations. Optimize spatial layout, safety, and lifting speeds with modern equipment.",
-    url: "https://radheenterprise.co.in/blog/best-material-handling-equipment-for-warehouses",
+    url: "https://www.radheenterprise.co.in/blog/best-material-handling-equipment-for-warehouses",
     type: "article",
   },
 };

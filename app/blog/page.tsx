@@ -15,12 +15,36 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Warehouse Logistics & Material Handling Blog | Radhe Enterprise",
     description: "Industry insights and expert advice on manual stackers, forklifts, pallet jacks, warehouse safety, and material handling optimization.",
-    url: "https://radheenterprise.co.in/blog",
+    url: "https://www.radheenterprise.co.in/blog",
     type: "website",
   },
 };
 
 const blogPosts = [
+  {
+    slug: "manual-stacker-buying-guide",
+    title: "Manual Stacker Buying Guide: Selection Parameters",
+    description: "Select the ideal manual hydraulic stacker for your warehouse by analyzing load capacities, mast structural profiles, fork adjustments, and wheel types.",
+    date: "August 10, 2026",
+    readTime: "6 Min Read",
+    category: "Selection Guide",
+  },
+  {
+    slug: "manual-stacker-vs-electric-stacker",
+    title: "Manual Stacker vs Electric Stacker: Warehouse Comparison",
+    description: "Compare manual hydraulic stackers with semi-electric and full-electric stackers. Understand the tradeoffs in acquisition cost, throughput, and maintenance.",
+    date: "August 05, 2026",
+    readTime: "5 Min Read",
+    category: "Equipment Comparison",
+  },
+  {
+    slug: "how-to-choose-the-right-manual-stacker",
+    title: "How to Choose the Right Manual Stacker",
+    description: "Avoid costly setup mistakes by choosing a manual hydraulic stacker that matches your specific pallet dimensions, load weights, and storage aisle clearances.",
+    date: "August 02, 2026",
+    readTime: "5 Min Read",
+    category: "Selection Guide",
+  },
   {
     slug: "manual-stacker-vs-forklift",
     title: "Manual Stacker vs Forklift: Choosing the Right Warehousing Tool",
@@ -30,10 +54,34 @@ const blogPosts = [
     category: "Equipment Comparison",
   },
   {
+    slug: "manual-stacker-safety-guide",
+    title: "Manual Stacker Safety Guide: Safe Operating Rules",
+    description: "Learn the essential safety rules for operating manual hydraulic stackers, including load centering, braking systems, and operator protection.",
+    date: "July 25, 2026",
+    readTime: "5 Min Read",
+    category: "Safety Regulations",
+  },
+  {
     slug: "how-to-choose-the-right-pallet-truck",
     title: "How to Choose the Right Pallet Truck for Your Facility",
     description: "A complete walkthrough on selecting manual hand pallet jacks versus walkie electric pallet trucks. Learn about capacity ranges, wheel materials, and length options.",
     date: "July 15, 2026",
+    readTime: "5 Min Read",
+    category: "Selection Guide",
+  },
+  {
+    slug: "manual-stacker-maintenance-guide",
+    title: "Manual Stacker Maintenance Guide & Checklist",
+    description: "Learn how to prolong the lifespan of your manual hydraulic stacker with a preventive maintenance checklist covering cylinder seals, lift chains, and wheel replacements.",
+    date: "July 12, 2026",
+    readTime: "5 Min Read",
+    category: "Maintenance Guide",
+  },
+  {
+    slug: "hand-pallet-truck-buying-guide",
+    title: "Hand Pallet Truck Buying Guide: Selection Parameters",
+    description: "Select the ideal manual hand pallet truck by evaluating load capacity limits, hydraulic pump types, wheel configurations, and specialized material chassis.",
+    date: "July 05, 2026",
     readTime: "5 Min Read",
     category: "Selection Guide",
   },
@@ -46,12 +94,28 @@ const blogPosts = [
     category: "Warehouse Logistics",
   },
   {
+    slug: "manual-vs-electric-pallet-truck",
+    title: "Manual vs Electric Pallet Truck: Selection Comparison",
+    description: "Analyze the differences between manual hand pallet jacks and battery-powered electric pallet trucks to determine the best match for your travel distances and cycle volumes.",
+    date: "June 25, 2026",
+    readTime: "5 Min Read",
+    category: "Equipment Comparison",
+  },
+  {
     slug: "benefits-of-electric-stackers",
     title: "5 Key Benefits of Switching to Electric Stackers",
     description: "Explore how electric and semi-electric stackers boost cycle times, eliminate manual strain, and save energy with lithium-ion charging technologies.",
     date: "June 12, 2026",
     readTime: "5 Min Read",
     category: "Industrial Efficiency",
+  },
+  {
+    slug: "electric-stacker-buying-guide",
+    title: "Electric Stacker Buying Guide: Selection Parameters",
+    description: "Choose the right electric stacker by evaluating battery capacity, motor sizes, operator configurations (walkie vs. stand-on), and specialized mast chassis.",
+    date: "June 12, 2026",
+    readTime: "5 Min Read",
+    category: "Selection Guide",
   },
   {
     slug: "warehouse-safety-tips",
@@ -72,14 +136,14 @@ export default function BlogIndex() {
     "publisher": {
       "@type": "Organization",
       "name": "Radhe Enterprise",
-      "logo": "https://radheenterprise.co.in/favicon.ico"
+      "logo": "https://www.radheenterprise.co.in/favicon.ico"
     },
     "blogPost": blogPosts.map((post) => ({
       "@type": "BlogPosting",
       "headline": post.title,
       "description": post.description,
       "datePublished": new Date(post.date).toISOString().split('T')[0],
-      "url": `https://radheenterprise.co.in/blog/${post.slug}`
+      "url": `https://www.radheenterprise.co.in/blog/${post.slug}`
     }))
   };
 

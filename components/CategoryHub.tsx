@@ -112,7 +112,7 @@ export default function CategoryHub({
     categories.includes(p.category)
   );
 
-  const baseUrl = "https://radheenterprise.co.in";
+  const baseUrl = "https://www.radheenterprise.co.in";
 
   // ItemList Schema
   const itemListSchema = {
@@ -142,6 +142,25 @@ export default function CategoryHub({
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.radheenterprise.co.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": title,
+        "item": `${baseUrl}${canonicalPath}`
+      }
+    ]
+  };
+
   return (
     <div className="bg-[#0B0E14] min-h-screen text-text-white flex flex-col justify-between font-sans">
       <Navbar />
@@ -154,6 +173,10 @@ export default function CategoryHub({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       <main className="flex-1">

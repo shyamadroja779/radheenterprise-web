@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Industrial Pallet Truck Supplier in India | Radhe Enterprise",
     description: "Explore our manual and electric pallet trucks. Heavy-duty construction, load capacity from 2000kg to 5000kg, durable polyurethane wheels.",
-    url: "https://radheenterprise.co.in/pallet-truck",
+    url: "https://www.radheenterprise.co.in/pallet-truck",
     type: "website",
   },
 };

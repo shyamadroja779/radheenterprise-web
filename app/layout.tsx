@@ -19,7 +19,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://radheenterprise.co.in"),
+  metadataBase: new URL("https://www.radheenterprise.co.in"),
   title: {
     template: "%s | RADHE ENTERPRISE",
     default: "RADHE ENTERPRISE | Material Handling & Lifting Equipment Manufacturer India",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "RADHE ENTERPRISE | Material Handling & Lifting Equipment Manufacturer",
     description: "RADHE ENTERPRISE manufactures high-performance industrial material handling equipment. Discover our manual stackers, electric stackers, forklifts, and pallet trucks.",
-    url: "https://radheenterprise.co.in",
+    url: "https://www.radheenterprise.co.in",
     siteName: "Radhe Enterprise",
     locale: "en_IN",
     type: "website",
@@ -81,8 +81,8 @@ export default function RootLayout({
     "@type": "Organization",
     "name": "Radhe Enterprise",
     "alternateName": "Radhe Enterprise Material Handling",
-    "url": "https://radheenterprise.co.in",
-    "logo": "https://radheenterprise.co.in/favicon.ico",
+    "url": "https://www.radheenterprise.co.in",
+    "logo": "https://www.radheenterprise.co.in/favicon.ico",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+91-96246-81003",

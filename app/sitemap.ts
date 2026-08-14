@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import productData from "@/data.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://radheenterprise.co.in";
+  const baseUrl = "https://www.radheenterprise.co.in";
   
   // Static pages
   const staticRoutes = [
@@ -21,6 +21,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/best-material-handling-equipment-for-warehouses",
     "/blog/benefits-of-electric-stackers",
     "/blog/warehouse-safety-tips",
+    "/blog/manual-stacker-buying-guide",
+    "/blog/manual-stacker-vs-electric-stacker",
+    "/blog/how-to-choose-the-right-manual-stacker",
+    "/blog/manual-stacker-safety-guide",
+    "/blog/manual-stacker-maintenance-guide",
+    "/blog/hand-pallet-truck-buying-guide",
+    "/blog/manual-vs-electric-pallet-truck",
+    "/blog/electric-stacker-buying-guide",
   ];
 
   const staticUrls = staticRoutes.map((route) => ({

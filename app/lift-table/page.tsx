@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Industrial Hydraulic Lift Table Manufacturer | Radhe Enterprise",
     description: "Heavy-duty electric and manual scissor lift tables. Rated capacities up to 5000kg. Customizable platform dimensions and lift heights.",
-    url: "https://radheenterprise.co.in/lift-table",
+    url: "https://www.radheenterprise.co.in/lift-table",
     type: "website",
   },
 };

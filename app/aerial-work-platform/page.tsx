@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Industrial Aerial Work Platform Manufacturer | Radhe Enterprise",
     description: "High-safety aerial work platforms and hydraulic scissor lifts. Lift heights up to 16m, dual-mast aluminum lifters, and certified safety rails.",
-    url: "https://radheenterprise.co.in/aerial-work-platform",
+    url: "https://www.radheenterprise.co.in/aerial-work-platform",
     type: "website",
   },
 };

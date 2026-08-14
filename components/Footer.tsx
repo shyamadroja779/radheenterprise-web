@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Hammer, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
@@ -86,12 +87,17 @@ export default function Footer() {
             <h4 className="text-text-white font-bold text-sm uppercase tracking-wider mb-4 border-l-2 border-primary-yellow pl-2">
               Get In Touch
             </h4>
-            <ul className="space-y-2.5 text-xs text-muted-gray">
+            <ul className="space-y-2.5 text-xs text-muted-gray mb-5">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-primary-yellow shrink-0 mt-0.5" />
-                <span>
+                <a
+                  href="https://www.google.com/maps/place/RADHE+ENTERPRISE+MORBI/@22.8601386,70.9543395,18z/data=!4m6!3m5!1s0x39598f73ea06dfc1:0xe61481f337601735!8m2!3d22.8601386!4d70.9543395!16s%2Fg%2F11ytvmwbyt?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary-yellow transition-colors"
+                >
                   Near CNG Petrol Pump, Opposite Shiv Hotel, Uchi Mandal, Morbi - 363642, Gujarat, India.
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-primary-yellow shrink-0" />
@@ -106,6 +112,28 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
+            <div className="space-y-2 pt-2 border-t border-gray-800/40">
+              <h5 className="text-text-white font-bold text-[10px] uppercase tracking-wider">
+                Review Us on Google
+              </h5>
+              <a
+                href="https://search.google.com/local/writereview?placeid=ChIJwd8G6nOPWTkRNRdgN_OBFOY"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block p-1.5 bg-white rounded-lg border border-gray-800 hover:border-primary-yellow/60 transition-all max-w-[100px] hover:scale-105 duration-200"
+              >
+                <Image
+                  src="/images/google-review-qr.png"
+                  alt="Google Review QR Code - Radhe Enterprise"
+                  width={90}
+                  height={90}
+                  className="w-full h-auto object-contain block"
+                />
+              </a>
+              <p className="text-[9px] text-muted-gray leading-normal">
+                Scan or click to leave feedback
+              </p>
+            </div>
           </div>
 
           {/* Business Hours */}

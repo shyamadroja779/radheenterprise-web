@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/_next/"],
     },
-    sitemap: "https://radheenterprise.co.in/sitemap.xml",
+    sitemap: "https://www.radheenterprise.co.in/sitemap.xml",
   };
 }

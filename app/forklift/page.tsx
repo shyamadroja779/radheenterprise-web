@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Heavy-Duty Forklift Supplier in India | Radhe Enterprise",
     description: "Industrial forklifts designed for heavy-duty lifting up to 5000kg. Reliable diesel and electric power plants with advanced safety certifications.",
-    url: "https://radheenterprise.co.in/forklift",
+    url: "https://www.radheenterprise.co.in/forklift",
     type: "website",
   },
 };

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "How to Choose the Right Pallet Truck: Selection Guide | Radhe Enterprise",
     description: "Learn how to select the best pallet jacks. Deep dive into wheel materials, dimensions, and battery systems.",
-    url: "https://radheenterprise.co.in/blog/how-to-choose-the-right-pallet-truck",
+    url: "https://www.radheenterprise.co.in/blog/how-to-choose-the-right-pallet-truck",
     type: "article",
   },
 };

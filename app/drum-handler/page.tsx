@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Industrial Drum Handler Manufacturer | Radhe Enterprise",
     description: "Safe and efficient hydraulic drum lifting and tilting machinery. Load capacities up to 500kg, 180-degree rotation, suitable for chemical and oil drums.",
-    url: "https://radheenterprise.co.in/drum-handler",
+    url: "https://www.radheenterprise.co.in/drum-handler",
     type: "website",
   },
 };

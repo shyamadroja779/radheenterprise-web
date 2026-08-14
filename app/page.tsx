@@ -1,4 +1,4 @@
-import React from "react";
+import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CategoriesSection from "@/components/CategoriesSection";
@@ -12,14 +12,30 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
+export const metadata: Metadata = {
+  title: "Radhe Enterprise | Material Handling Equipment Manufacturer Gujarat",
+  description: "Radhe Enterprise is a material handling equipment manufacturer and supplier based in Morbi, Gujarat, India. Explore manual stackers, electric stackers, forklifts, pallet trucks and other industrial equipment.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Radhe Enterprise | Material Handling Equipment Manufacturer Gujarat",
+    description: "Premium industrial material handling equipment. Discover our manual stackers, electric stackers, forklifts, and pallet trucks manufactured in Morbi, Gujarat, India.",
+    url: "https://www.radheenterprise.co.in",
+    siteName: "Radhe Enterprise",
+    locale: "en_IN",
+    type: "website",
+  },
+};
+
 export default function Home() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Radhe Enterprise",
-    "image": "https://radheenterprise.co.in/favicon.ico",
-    "@id": "https://radheenterprise.co.in/#localbusiness",
-    "url": "https://radheenterprise.co.in",
+    "image": "https://www.radheenterprise.co.in/favicon.ico",
+    "@id": "https://www.radheenterprise.co.in/#localbusiness",
+    "url": "https://www.radheenterprise.co.in",
     "telephone": "+91-96246-81003",
     "priceRange": "$$",
     "address": {

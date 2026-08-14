@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Warehouse Safety Tips: Operating Lifting Machinery | Radhe Enterprise",
     description: "Keep your operators safe. Review our safety rules, load limits, and maintenance guidelines for warehouse machinery.",
-    url: "https://radheenterprise.co.in/blog/warehouse-safety-tips",
+    url: "https://www.radheenterprise.co.in/blog/warehouse-safety-tips",
     type: "article",
   },
 };

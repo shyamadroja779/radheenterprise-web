@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Manual Stacker vs Forklift: Selection Guide | Radhe Enterprise",
     description: "Compare manual lifters and engine forklifts. Optimize your warehouse storage, operations, and budgets.",
-    url: "https://radheenterprise.co.in/blog/manual-stacker-vs-forklift",
+    url: "https://www.radheenterprise.co.in/blog/manual-stacker-vs-forklift",
     type: "article",
   },
 };

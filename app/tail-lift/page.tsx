@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hydraulic Truck Tail Lift Manufacturer | Radhe Enterprise",
     description: "Reliable vehicle-mounted tail lifts. Capacities from 1000kg to 2000kg. Steel and aluminum folding platforms for commercial trucks and delivery fleets.",
-    url: "https://radheenterprise.co.in/tail-lift",
+    url: "https://www.radheenterprise.co.in/tail-lift",
     type: "website",
   },
 };

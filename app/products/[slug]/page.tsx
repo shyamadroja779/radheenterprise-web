@@ -37,7 +37,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${product.name} Manufacturer in Gujarat, India | RADHE ENTERPRISE`,
       description: product.description,
-      url: `https://radheenterprise.co.in/products/${product.slug}`,
+      url: `https://www.radheenterprise.co.in/products/${product.slug}`,
       siteName: "Radhe Enterprise",
       locale: "en_IN",
       type: "website",
@@ -71,7 +71,7 @@ export default async function ProductPage({
     notFound();
   }
 
-  const baseUrl = "https://radheenterprise.co.in";
+  const baseUrl = "https://www.radheenterprise.co.in";
 
   // Product Schema
   const productSchema = {
@@ -128,6 +128,32 @@ export default async function ProductPage({
     ]
   };
 
+  // Breadcrumb Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.radheenterprise.co.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Products",
+        "item": "https://www.radheenterprise.co.in/#products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": product.name,
+        "item": `${baseUrl}/products/${product.slug}`
+      }
+    ]
+  };
+
   return (
     <>
       <script
@@ -137,6 +163,10 @@ export default async function ProductPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <ProductDetailClient product={product as any} />
     </>
