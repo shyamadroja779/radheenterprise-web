@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import {
   MapPin,
   Mail,
@@ -223,7 +222,7 @@ export default function ContactSection() {
                   </p>
                   <button
                     onClick={handleWhatsAppRedirect}
-                    className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-dark-bg px-5 py-3 rounded-lg text-xs font-mono font-bold uppercase transition-all shadow-md mt-2"
+                    className="btn-whatsapp px-5 py-3 text-xs uppercase mt-2"
                   >
                     Open in WhatsApp Chat
                   </button>
@@ -335,7 +334,7 @@ export default function ContactSection() {
                   <div className="pt-2 flex flex-col sm:flex-row gap-3">
                     <button
                       type="submit"
-                      className="flex-1 flex items-center justify-center gap-2 bg-primary-yellow text-dark-bg hover:bg-orange-accent px-5 py-3 rounded-lg text-xs font-extrabold uppercase tracking-wider transition-all shadow-[0_4px_12px_rgba(245,166,35,0.2)]"
+                      className="btn-primary flex-1 py-3 text-xs uppercase tracking-wider"
                     >
                       <Send className="w-3.5 h-3.5" />
                       Submit Spec Inquiry
@@ -344,7 +343,7 @@ export default function ContactSection() {
                     <button
                       type="button"
                       onClick={handleWhatsAppRedirect}
-                      className="flex items-center justify-center gap-2 border border-emerald-500/30 hover:bg-emerald-500/10 text-emerald-400 px-5 py-3 rounded-lg text-xs font-mono font-bold uppercase transition-all"
+                      className="btn-whatsapp-outline px-5 py-3 text-xs"
                     >
                       Direct WhatsApp Inquiry
                     </button>

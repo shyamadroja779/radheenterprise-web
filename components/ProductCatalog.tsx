@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
-import { Search, SlidersHorizontal, ArrowUpDown, ChevronLeft, ChevronRight, Info, Battery, ShieldAlert } from "lucide-react";
+import { Search, ArrowUpDown, ChevronLeft, ChevronRight, Battery, ShieldAlert } from "lucide-react";
 import productData from "@/data.json";
 import ProductDetailModal from "./ProductDetailModal";
 import { AnimatePresence } from "framer-motion";
@@ -252,10 +252,10 @@ export default function ProductCatalog() {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-medium border tracking-wide transition-all ${
+                  className={`btn-tab ${
                     selectedCategory === cat
-                      ? "bg-primary-yellow text-dark-bg border-primary-yellow font-bold shadow-md"
-                      : "bg-[#0B0E14] border-gray-800 text-muted-gray hover:border-gray-700 hover:text-text-white"
+                      ? "btn-tab-active"
+                      : "btn-tab-inactive"
                   }`}
                 >
                   {cat}
@@ -327,7 +327,7 @@ export default function ProductCatalog() {
                     {/* CTA Details Button */}
                     <button
                       onClick={() => setSelectedProductSlug(p.slug)}
-                      className="w-full bg-[#0B0E14] group-hover:bg-primary-yellow text-text-white group-hover:text-dark-bg border border-gray-800 group-hover:border-primary-yellow py-2.5 rounded-lg text-xs font-mono font-bold uppercase transition-all flex items-center justify-center gap-1.5"
+                      className="btn-secondary w-full py-2.5 text-xs uppercase group-hover:bg-primary-yellow group-hover:text-dark-bg group-hover:border-primary-yellow transition-all"
                     >
                       <span>View Specifications</span>
                       <ChevronRight className="w-3.5 h-3.5 text-primary-yellow group-hover:text-dark-bg" />
@@ -352,10 +352,10 @@ export default function ProductCatalog() {
             <button
               onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
               disabled={currentPage === 1}
-              className={`p-2.5 rounded-lg border text-xs transition-all ${
+              className={`p-2.5 text-xs ${
                 currentPage === 1
-                  ? "border-gray-800 text-gray-700 bg-transparent cursor-not-allowed"
-                  : "border-gray-800 bg-[#161B22] text-text-white hover:border-primary-yellow/40 hover:text-primary-yellow cursor-pointer"
+                  ? "border-gray-800 text-gray-700 bg-transparent cursor-not-allowed rounded-lg border"
+                  : "btn-close"
               }`}
             >
               <ChevronLeft className="w-4 h-4" />
@@ -369,10 +369,10 @@ export default function ProductCatalog() {
             <button
               onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
               disabled={currentPage === totalPages}
-              className={`p-2.5 rounded-lg border text-xs transition-all ${
+              className={`p-2.5 text-xs ${
                 currentPage === totalPages
-                  ? "border-gray-800 text-gray-700 bg-transparent cursor-not-allowed"
-                  : "border-gray-800 bg-[#161B22] text-text-white hover:border-primary-yellow/40 hover:text-primary-yellow cursor-pointer"
+                  ? "border-gray-800 text-gray-700 bg-transparent cursor-not-allowed rounded-lg border"
+                  : "btn-close"
               }`}
             >
               <ChevronRight className="w-4 h-4" />

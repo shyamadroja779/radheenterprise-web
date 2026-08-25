@@ -60,3 +60,44 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Unified Button Utility Classes */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 bg-primary-yellow text-dark-bg hover:bg-orange-accent rounded-lg font-bold transition-all shadow-[0_4px_12px_rgba(245,166,35,0.25)] hover:shadow-[0_6px_20px_rgba(245,166,35,0.4)] cursor-pointer text-center select-none;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 border border-gray-800 hover:border-primary-yellow/40 hover:bg-[#161B22] rounded-lg font-bold text-text-white transition-all cursor-pointer text-center select-none;
+}
+
+.btn-outline-yellow {
+  @apply inline-flex items-center justify-center gap-2 border border-primary-yellow/20 hover:border-primary-yellow/60 bg-primary-yellow/5 hover:bg-primary-yellow/10 text-primary-yellow font-mono rounded-lg transition-all cursor-pointer text-center select-none;
+}
+
+.btn-gradient {
+  @apply inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#1E2530] to-[#161B22] border border-gray-800 hover:border-primary-yellow/40 hover:from-[#232C3A] hover:to-[#1C232E] text-text-white rounded-lg font-mono font-bold uppercase transition-all shadow-lg cursor-pointer text-center select-none;
+}
+
+.btn-whatsapp {
+  @apply inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-dark-bg rounded-lg font-bold transition-all shadow-[0_4px_12px_rgba(16,185,129,0.2)] cursor-pointer text-center select-none;
+}
+
+.btn-whatsapp-outline {
+  @apply inline-flex items-center justify-center gap-2 border border-emerald-500/30 hover:bg-emerald-500/10 text-emerald-400 font-mono font-bold uppercase rounded-lg transition-all cursor-pointer text-center select-none;
+}
+
+.btn-tab {
+  @apply px-4 py-2 text-xs font-mono font-bold rounded-lg border transition-all cursor-pointer text-center select-none;
+}
+
+.btn-tab-active {
+  @apply bg-primary-yellow text-dark-bg border-primary-yellow shadow-md;
+}
+
+.btn-tab-inactive {
+  @apply bg-[#0B0E14] border-gray-800 text-muted-gray hover:border-gray-700 hover:text-text-white;
+}
+
+.btn-close {
+  @apply text-muted-gray hover:text-primary-yellow p-2 transition-colors bg-[#0B0E14] border border-gray-800 rounded-lg cursor-pointer flex items-center justify-center;
+}
+

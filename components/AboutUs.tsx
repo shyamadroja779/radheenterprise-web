@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { CheckCircle2, Factory, FileDown, Cog, ShieldCheck, Flame } from "lucide-react";
+import { Factory, FileDown, ShieldCheck, Flame } from "lucide-react";
 
 export default function AboutUs() {
   const coreMaterials = [
@@ -74,7 +74,7 @@ export default function AboutUs() {
               <a
                 href="/catalog.pdf"
                 download="RADHE_Enterprise_Material_Handling_Catalog.pdf"
-                className="inline-flex items-center gap-2.5 bg-gradient-to-r from-[#1E2530] to-[#161B22] border border-gray-800 hover:border-primary-yellow/40 hover:from-[#232C3A] hover:to-[#1C232E] px-6 py-4 rounded-xl text-xs font-mono font-bold tracking-wider text-text-white uppercase transition-all shadow-lg"
+                className="btn-gradient px-6 py-4 rounded-xl text-xs tracking-wider"
               >
                 <FileDown className="w-4 h-4 text-primary-yellow" />
                 Download PDF Catalog (24MB)

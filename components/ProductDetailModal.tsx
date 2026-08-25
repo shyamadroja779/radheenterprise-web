@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { X, FileDown, ShieldCheck, HelpCircle, ArrowRight, MessageSquare, Clipboard } from "lucide-react";
+import { motion } from "framer-motion";
+import { X, FileDown, ShieldCheck, MessageSquare, Clipboard } from "lucide-react";
 
 export interface ProductDetailModalProps {
   product: {
@@ -67,7 +67,7 @@ export default function ProductDetailModal({ product, onClose }: ProductDetailMo
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-muted-gray hover:text-primary-yellow p-2 transition-colors z-20 bg-[#0B0E14] border border-gray-800 rounded-lg"
+          className="btn-close absolute top-4 right-4 z-20"
           aria-label="Close details"
         >
           <X className="w-5 h-5" />
@@ -135,10 +135,10 @@ export default function ProductDetailModal({ product, onClose }: ProductDetailMo
                   <button
                     key={model}
                     onClick={() => setActiveModel(model)}
-                    className={`px-4 py-2 text-xs font-mono font-bold rounded-lg border transition-all ${
+                    className={`btn-tab ${
                       activeModel === model
-                        ? "bg-primary-yellow text-dark-bg border-primary-yellow shadow-md"
-                        : "bg-[#161B22] border-gray-800 text-muted-gray hover:border-gray-700 hover:text-text-white"
+                        ? "btn-tab-active"
+                        : "btn-tab-inactive"
                     }`}
                   >
                     {model}
@@ -183,7 +183,7 @@ export default function ProductDetailModal({ product, onClose }: ProductDetailMo
                 <a
                   href="/catalog.pdf"
                   download="RADHE_Enterprise_Material_Handling_Catalog.pdf"
-                  className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#1E2530] to-[#161B22] border border-gray-800 hover:border-primary-yellow/40 hover:from-[#232C3A] hover:to-[#1C232E] py-2.5 rounded-lg text-xs font-mono font-bold uppercase text-text-white"
+                  className="btn-gradient py-2.5 rounded-lg text-xs"
                 >
                   <FileDown className="w-3.5 h-3.5 text-primary-yellow" />
                   Download PDF
@@ -213,7 +213,7 @@ export default function ProductDetailModal({ product, onClose }: ProductDetailMo
                     />
                     <button
                       type="submit"
-                      className="w-full flex items-center justify-center gap-1.5 bg-primary-yellow text-dark-bg hover:bg-orange-accent py-2 rounded text-xs font-extrabold uppercase transition-all shadow-[0_2px_6px_rgba(245,166,35,0.15)]"
+                      className="btn-primary w-full py-2 text-xs uppercase"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
                       Inquire on WhatsApp

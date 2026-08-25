@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, FileDown, ShieldCheck, Clipboard, MessageSquare, Mail, Phone, Clock, HardHat, ChevronRight } from "lucide-react";
+import { ArrowLeft, FileDown, ShieldCheck, Clipboard, MessageSquare, Clock, HardHat, ChevronRight } from "lucide-react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import FloatingWhatsApp from "./FloatingWhatsApp";
@@ -197,10 +197,10 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
                         message: `Hello, I'm interested in the ${product.name} (Model: ${model}). Please send pricing and availability.`,
                       }));
                     }}
-                    className={`px-5 py-2.5 text-xs font-mono font-extrabold rounded-lg border transition-all ${
+                    className={`btn-tab ${
                       activeModel === model
-                        ? "bg-primary-yellow text-dark-bg border-primary-yellow shadow-md"
-                        : "bg-[#0B0E14] border-gray-800 text-muted-gray hover:border-gray-700 hover:text-text-white"
+                        ? "btn-tab-active"
+                        : "btn-tab-inactive"
                     }`}
                   >
                     {model}
@@ -291,7 +291,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
 
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 bg-primary-yellow text-dark-bg hover:bg-orange-accent py-3 rounded-lg text-xs font-mono font-extrabold uppercase transition-all shadow-md"
+                    className="btn-primary w-full py-3 text-xs uppercase"
                   >
                     <MessageSquare className="w-4 h-4 fill-current" />
                     Submit Enquiry & Chat on WhatsApp

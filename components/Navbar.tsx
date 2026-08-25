@@ -88,14 +88,14 @@ export default function Navbar() {
               href="https://wa.me/919624681003"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs text-primary-yellow border border-primary-yellow/20 hover:border-primary-yellow/60 px-3.5 py-2 rounded-lg bg-primary-yellow/5 hover:bg-primary-yellow/10 transition-all font-mono"
+              className="btn-outline-yellow px-3.5 py-2 text-xs"
             >
               WhatsApp Support
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
             <a
               href="#contact"
-              className="flex items-center gap-2 bg-primary-yellow text-dark-bg hover:bg-orange-accent px-5 py-2.5 rounded-lg text-sm font-bold tracking-wide transition-all shadow-[0_4px_12px_rgba(245,166,35,0.25)] hover:shadow-[0_6px_20px_rgba(245,166,35,0.4)]"
+              className="btn-primary px-5 py-2.5 text-sm"
             >
               <PhoneCall className="w-4 h-4" />
               Request Quote
@@ -162,19 +162,19 @@ export default function Navbar() {
                 href="https://wa.me/919624681003"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-1.5 text-sm text-primary-yellow border border-primary-yellow/20 px-4 py-2.5 rounded-lg bg-primary-yellow/5"
+                className="btn-outline-yellow px-4 py-2.5 text-sm w-full"
               >
                 WhatsApp Support
                 <ArrowUpRight className="w-4 h-4" />
               </a>
-              <a
+              <Link
                 href="/#contact"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center justify-center gap-2 bg-primary-yellow text-dark-bg px-4 py-3 rounded-lg text-base font-bold"
+                className="btn-primary px-4 py-3 text-base w-full"
               >
                 <PhoneCall className="w-4 h-4" />
                 Request Quote
-              </a>
+              </Link>
             </div>
           </div>
         </div>

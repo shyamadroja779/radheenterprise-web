@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronRight, ArrowDown, Shield, Award, HelpCircle } from "lucide-react";
+import { ChevronRight, ArrowDown, Shield } from "lucide-react";
 import StackerCanvas from "./3d/StackerCanvas";
 
 export default function Hero() {
@@ -75,14 +75,14 @@ export default function Hero() {
             >
               <a
                 href="#products"
-                className="flex items-center gap-2 bg-primary-yellow text-dark-bg hover:bg-orange-accent px-6 py-3.5 rounded-lg text-sm font-extrabold tracking-wide uppercase transition-all shadow-[0_4px_14px_rgba(245,166,35,0.3)]"
+                className="btn-primary px-6 py-3.5 text-sm uppercase tracking-wide"
               >
                 Explore Products
                 <ChevronRight className="w-4 h-4 stroke-[3]" />
               </a>
               <a
                 href="#contact"
-                className="flex items-center gap-2 border border-gray-800 hover:border-primary-yellow/40 hover:bg-[#161B22] px-6 py-3.5 rounded-lg text-sm font-bold text-text-white transition-all"
+                className="btn-secondary px-6 py-3.5 text-sm"
               >
                 Contact Us
               </a>
