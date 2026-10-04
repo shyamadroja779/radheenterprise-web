@@ -35,7 +35,7 @@ export default function AboutUs() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Column: Text & Company Context */}
           <div className="lg:col-span-6 space-y-6">
             <div className="space-y-2">
@@ -77,7 +77,7 @@ export default function AboutUs() {
                 className="btn-gradient px-6 py-4 rounded-xl text-xs tracking-wider"
               >
                 <FileDown className="w-4 h-4 text-primary-yellow" />
-                Download PDF Catalog (24MB)
+                Download PDF Catalog (5MB)
               </a>
             </div>
           </div>
