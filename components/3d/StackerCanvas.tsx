@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Environment } from "@react-three/drei";
+import { Rotate3d, Check } from "lucide-react";
 import * as THREE from "three";
 
 // 3D Stacker component that animates parts based on the lift height prop (0 to 1)
@@ -250,9 +251,17 @@ function FloatingParticles({ count = 50 }) {
 
 export default function StackerCanvas({ liftHeight }: { liftHeight: number }) {
   const [mounted, setMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [touchOrbitActive, setTouchOrbitActive] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   if (!mounted) {
@@ -266,57 +275,59 @@ export default function StackerCanvas({ liftHeight }: { liftHeight: number }) {
   }
 
   return (
-    <div className="w-full h-[320px] md:h-[480px] bg-[#0B0E14] border border-[#161B22] rounded-xl relative overflow-hidden group shadow-2xl">
+    <div className={`w-full h-[320px] md:h-[480px] bg-[#0B0E14] border border-[#161B22] rounded-xl relative overflow-hidden group shadow-2xl ${isMobile && !touchOrbitActive ? "touch-pan-y" : ""}`}>
       {/* Futuristic Grid Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(22,27,34,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(22,27,34,0.35)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(245,166,35,0.05),transparent_80%)] pointer-events-none" />
       
       {/* 3D Canvas */}
-      <Canvas
-        camera={{ position: [2.5, 1.8, 3.2], fov: 45 }}
-        shadows
-      >
-        <ambientLight intensity={0.5} />
-        <directionalLight
-          position={[5, 10, 5]}
-          intensity={1.2}
-          castShadow
-          shadow-mapSize-width={1024}
-          shadow-mapSize-height={1024}
-        />
-        <directionalLight position={[-5, 5, -5]} intensity={0.3} />
-        <pointLight position={[0, 4, 2]} intensity={0.5} color="#F5A623" />
-        
-        {/* Animated Stacker Model */}
-        <StackerModel lift={liftHeight} />
-        
-        {/* Floating dust/industrial spark particles */}
-        <FloatingParticles count={60} />
-        
-        {/* Contact shadow below stacker */}
-        <ContactShadows
-          position={[0, -0.75, 0]}
-          opacity={0.65}
-          scale={5}
-          blur={1.5}
-          far={2.5}
-        />
-        
-        {/* Lighting reflections */}
-        <Environment preset="warehouse" />
-        
-        {/* Interaction Controls */}
-        <OrbitControls
-          enableZoom={true}
-          enablePan={true}
-          minDistance={1.8}
-          maxDistance={6.0}
-          maxPolarAngle={Math.PI / 2 + 0.05} // Don't orbit below ground level
-        />
-      </Canvas>
+      <div className={`w-full h-full ${isMobile && !touchOrbitActive ? "pointer-events-none" : "pointer-events-auto"}`}>
+        <Canvas
+          camera={{ position: [2.5, 1.8, 3.2], fov: 45 }}
+          shadows
+        >
+          <ambientLight intensity={0.5} />
+          <directionalLight
+            position={[5, 10, 5]}
+            intensity={1.2}
+            castShadow
+            shadow-mapSize-width={1024}
+            shadow-mapSize-height={1024}
+          />
+          <directionalLight position={[-5, 5, -5]} intensity={0.3} />
+          <pointLight position={[0, 4, 2]} intensity={0.5} color="#F5A623" />
+          
+          {/* Animated Stacker Model */}
+          <StackerModel lift={liftHeight} />
+          
+          {/* Floating dust/industrial spark particles */}
+          <FloatingParticles count={60} />
+          
+          {/* Contact shadow below stacker */}
+          <ContactShadows
+            position={[0, -0.75, 0]}
+            opacity={0.65}
+            scale={5}
+            blur={1.5}
+            far={2.5}
+          />
+          
+          {/* Lighting reflections */}
+          <Environment preset="warehouse" />
+          
+          {/* Interaction Controls */}
+          <OrbitControls
+            enableZoom={!isMobile}
+            enablePan={!isMobile}
+            minDistance={1.8}
+            maxDistance={6.0}
+            maxPolarAngle={Math.PI / 2 + 0.05} // Don't orbit below ground level
+          />
+        </Canvas>
+      </div>
 
       {/* Floating UI Badges */}
-      <div className="absolute top-4 left-4 flex flex-col gap-1 font-mono text-[10px] pointer-events-none">
+      <div className="absolute top-4 left-4 flex flex-col gap-1 font-mono text-[10px] pointer-events-none z-10">
         <div className="bg-[#161B22]/90 border border-primary-yellow/20 px-2 py-1 rounded text-primary-yellow flex items-center gap-1.5 backdrop-blur-sm">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
           SYSTEM: ACTIVE
@@ -326,7 +337,33 @@ export default function StackerCanvas({ liftHeight }: { liftHeight: number }) {
         </div>
       </div>
 
-      <div className="absolute bottom-4 right-4 text-right font-mono text-[10px] text-muted-gray pointer-events-none">
+      {/* Mobile Touch Orbit Action Bar */}
+      {isMobile && (
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 pointer-events-auto">
+          {!touchOrbitActive ? (
+            <button
+              type="button"
+              onClick={() => setTouchOrbitActive(true)}
+              className="bg-[#161B22]/95 border border-primary-yellow/60 text-primary-yellow px-4 py-1.5 rounded-full text-[11px] font-mono font-bold flex items-center gap-1.5 shadow-2xl backdrop-blur-md active:scale-95 transition-all cursor-pointer"
+            >
+              <Rotate3d className="w-3.5 h-3.5" />
+              <span>Tap to Rotate 3D</span>
+            </button>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setTouchOrbitActive(false)}
+              className="bg-primary-yellow text-dark-bg px-4 py-1.5 rounded-full text-[11px] font-mono font-bold flex items-center gap-1.5 shadow-2xl active:scale-95 transition-all cursor-pointer"
+            >
+              <Check className="w-3.5 h-3.5" />
+              <span>Done (Unlock Scroll)</span>
+            </button>
+          )}
+        </div>
+      )}
+
+      {/* Desktop Orbit Indicator */}
+      <div className="hidden md:block absolute bottom-4 right-4 text-right font-mono text-[10px] text-muted-gray pointer-events-none z-10">
         <div>LIFT: {(liftHeight * 100).toFixed(0)}%</div>
         <div>ROTATION: DRAG TO SPIN</div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { HardHat, ChevronRight, Battery, ArrowLeft, ArrowUpRight, Compass, ShieldCheck } from "lucide-react";
+import { HardHat, ChevronRight, Battery, ArrowLeft, ArrowUpRight, Compass, ShieldCheck, FileDown } from "lucide-react";
 import productData from "@/data.json";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -200,13 +200,22 @@ export default function CategoryHub({
                   {subtitle}
                 </p>
               </div>
-              <div className="lg:col-span-4 flex justify-end">
+              <div className="lg:col-span-4 flex flex-wrap items-center justify-start lg:justify-end gap-3">
+                <a
+                  href="/catalog.pdf"
+                  download="RADHE_Enterprise_Material_Handling_Catalog.pdf"
+                  className="btn-outline-yellow px-4 py-3 rounded-lg text-xs font-mono flex items-center gap-1.5"
+                  title="Download Radhe Enterprise Equipment Catalog (PDF)"
+                >
+                  <FileDown className="w-4 h-4" />
+                  <span>PDF CATALOG</span>
+                </a>
                 <Link
                   href="/#products"
                   className="inline-flex items-center gap-2 text-xs font-mono text-muted-gray hover:text-primary-yellow bg-[#161B22] border border-gray-800 hover:border-primary-yellow/20 px-5 py-3 rounded-lg transition-all"
                 >
                   <ArrowLeft className="w-4 h-4" />
-                  VIEW ALL EQUIPMENT
+                  VIEW ALL
                 </Link>
               </div>
             </div>

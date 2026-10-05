@@ -93,13 +93,13 @@ export default function Navbar() {
               WhatsApp Support
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="btn-primary px-5 py-2.5 text-sm"
             >
               <PhoneCall className="w-4 h-4" />
               Request Quote
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

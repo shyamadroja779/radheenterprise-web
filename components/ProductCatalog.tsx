@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
-import { Search, ArrowUpDown, ChevronLeft, ChevronRight, Battery, ShieldAlert } from "lucide-react";
+import { Search, ArrowUpDown, ChevronLeft, ChevronRight, Battery, ShieldAlert, FileDown } from "lucide-react";
 import productData from "@/data.json";
 import ProductDetailModal from "./ProductDetailModal";
 import { AnimatePresence } from "framer-motion";
@@ -224,21 +224,32 @@ export default function ProductCatalog() {
               />
             </div>
             
-            <div className="flex items-center gap-3 w-full md:w-auto shrink-0 justify-end">
-              <span className="text-xs font-mono text-muted-gray flex items-center gap-1">
-                <ArrowUpDown className="w-3.5 h-3.5" />
-                Sort:
-              </span>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="bg-[#0B0E14] border border-gray-800 rounded-lg px-3 py-2 text-xs text-text-white focus:outline-none focus:border-primary-yellow font-mono"
+            <div className="flex flex-wrap items-center gap-3 w-full md:w-auto shrink-0 justify-end">
+              <a
+                href="/catalog.pdf"
+                download="RADHE_Enterprise_Material_Handling_Catalog.pdf"
+                className="btn-outline-yellow px-3.5 py-2 text-xs flex items-center gap-1.5"
+                title="Download Radhe Enterprise Equipment Catalog (PDF)"
               >
-                <option value="name-asc">Name: A to Z</option>
-                <option value="name-desc">Name: Z to A</option>
-                <option value="capacity-asc">Capacity: Low to High</option>
-                <option value="capacity-desc">Capacity: High to Low</option>
-              </select>
+                <FileDown className="w-3.5 h-3.5" />
+                <span>PDF Catalog</span>
+              </a>
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-mono text-muted-gray flex items-center gap-1">
+                  <ArrowUpDown className="w-3.5 h-3.5" />
+                  Sort:
+                </span>
+                <select
+                  value={sortBy}
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="bg-[#0B0E14] border border-gray-800 rounded-lg px-3 py-2 text-xs text-text-white focus:outline-none focus:border-primary-yellow font-mono"
+                >
+                  <option value="name-asc">Name: A to Z</option>
+                  <option value="name-desc">Name: Z to A</option>
+                  <option value="capacity-asc">Capacity: Low to High</option>
+                  <option value="capacity-desc">Capacity: High to Low</option>
+                </select>
+              </div>
             </div>
           </div>
 

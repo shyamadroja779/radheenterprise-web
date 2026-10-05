@@ -166,7 +166,7 @@ export default function Hero() {
                 <span className="text-[10px] font-mono text-muted-gray">MAX</span>
               </div>
               <p className="text-[10px] text-muted-gray leading-normal text-center italic">
-                Drag slider to simulate manual pump/electric lifting. Hold left click on model to orbit, right click to pan.
+                Drag slider to simulate manual pump/electric lifting. Click & drag on desktop or tap rotate button on mobile to orbit 3D view.
               </p>
             </motion.div>
           </div>

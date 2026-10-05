@@ -14,6 +14,8 @@ import {
   Briefcase,
   Compass,
   Headphones,
+  BadgePercent,
+  PackageCheck,
 } from "lucide-react";
 
 export default function WhyChooseUs() {
@@ -60,6 +62,18 @@ export default function WhyChooseUs() {
         "Fully customizable mast heights, stretchable load legs, adjustable forks width, and specialized drum handling attachments designed per order.",
       icon: Settings,
     },
+    {
+      title: "Direct Manufacturer Pricing",
+      description:
+        "Factory-direct manufacturing eliminates middlemen and distributor commissions, delivering heavy-duty equipment at honest, competitive factory prices.",
+      icon: BadgePercent,
+    },
+    {
+      title: "Genuine Spares & Rapid Support",
+      description:
+        "Immediate availability of OEM replacement parts, hydraulic seal kits, and dedicated technical guidance to ensure zero warehouse downtime.",
+      icon: PackageCheck,
+    },
   ];
 
   const stats = [
@@ -104,7 +118,7 @@ export default function WhyChooseUs() {
           </p>
         </div>
 
-        {/* 7 Core Strengths Cards - Grid */}
+        {/* 9 Core Strengths Cards - 3x3 Grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
